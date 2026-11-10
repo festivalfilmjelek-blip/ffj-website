@@ -975,3 +975,47 @@ h1, h2, h3 {
     border-bottom: 1px solid #444;
   }
 }
+
+
+/* =========================================
+   FFJ RUNNING TEXT — SLOW & SMOOTH
+   ========================================= */
+
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  background: #ff5b9b;
+  color: #171414;
+  padding: 15px 0;
+}
+
+.ticker > div {
+  display: block;
+  width: max-content;
+  white-space: nowrap;
+
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.4;
+
+  animation: ffjTickerSlow 60s linear infinite;
+  will-change: transform;
+}
+
+@keyframes ffjTickerSlow {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-40%);
+  }
+}
+
+@media (max-width: 700px) {
+  .ticker > div {
+    font-size: 14px;
+    animation-duration: 70s;
+  }
+}
