@@ -1019,3 +1019,69 @@ h1, h2, h3 {
     animation-duration: 70s;
   }
 }
+
+
+/* =========================================
+   FFJ RUNNING TEXT — SEAMLESS & SLOW
+   ========================================= */
+
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  background: #ff5b9b;
+  color: #171414;
+  padding: 15px 0;
+}
+
+.ticker > .ticker-track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  animation: ffjSeamlessTicker 65s linear infinite;
+  will-change: transform;
+}
+
+.ticker-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 48px;
+  padding-right: 48px;
+}
+
+.ticker-group span {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+@keyframes ffjSeamlessTicker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 700px) {
+  .ticker > .ticker-track {
+    animation-duration: 75s;
+  }
+
+  .ticker-group span {
+    font-size: 14px;
+  }
+
+  .ticker-group {
+    gap: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker > .ticker-track {
+    animation: none;
+  }
+}
