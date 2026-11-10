@@ -933,3 +933,45 @@ h1, h2, h3 {
     font-size: 40px;
   }
 }
+
+
+/* =====================================
+   FFJ NAVBAR — ORIGINAL BLACK STYLE
+   ===================================== */
+
+.nav {
+  background: #171414;
+  color: #f4ecdd;
+  border-bottom: 2px solid #171414;
+}
+
+.nav nav a {
+  color: #f4ecdd;
+}
+
+.nav nav a:hover {
+  color: #ff5b9b;
+}
+
+.menu {
+  color: #f4ecdd;
+}
+
+#lang {
+  background: #f7d742;
+  color: #171414;
+  border: 2px solid #f7d742;
+}
+
+/* Mobile navigation */
+@media (max-width: 700px) {
+  .nav nav {
+    background: #171414;
+    border-bottom: 2px solid #f4ecdd;
+  }
+
+  .nav nav a {
+    color: #f4ecdd;
+    border-bottom: 1px solid #444;
+  }
+}
