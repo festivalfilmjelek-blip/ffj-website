@@ -1146,3 +1146,133 @@ h1, h2, h3 {
 .instagram-link:hover {
   color: #ff5b9b;
 }
+
+
+/* =========================================
+   FFJ IN THE PRESS
+   ========================================= */
+
+.press-intro {
+  max-width: 620px;
+  font-size: clamp(16px, 2vw, 21px);
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 45px;
+}
+
+.press-card {
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
+  min-width: 0;
+  min-height: 300px;
+  background: #f7d742;
+  color: #171414;
+  border: 2px solid #171414;
+  box-shadow: 5px 5px 0 #171414;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.press-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 #171414;
+}
+
+.press-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.press-media {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 12px;
+  letter-spacing: .02em;
+}
+
+.press-date {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.press-card h3 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(18px, 2vw, 23px);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  margin: 0 0 18px;
+}
+
+.press-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.press-read {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 12px 15px;
+  background: #171414;
+  color: #f4ecdd;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.press-read:hover {
+  background: #ff5b9b;
+  color: #171414;
+}
+
+.press-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+.press-more {
+  padding: 17px 30px;
+  border: 2px solid #171414;
+  background: #ff5b9b;
+  color: #171414;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.press-more:hover {
+  background: #f7d742;
+}
+
+.press-more[hidden] {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .press-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .press-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .press-card {
+    min-height: 260px;
+    padding: 22px;
+  }
+}
