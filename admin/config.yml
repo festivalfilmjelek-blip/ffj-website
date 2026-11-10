@@ -1,0 +1,59 @@
+# SETUP REQUIRED: replace repository and configure GitHub OAuth / auth provider.
+# This admin panel will NOT allow login until authentication is configured.
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPOSITORY
+  branch: main
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+site_url: https://festivalfilmjelek.com
+logo_url: /assets/ffj-logo.png
+collections:
+  - name: "website"
+    label: "Website FFJ"
+    files:
+      - name: "settings"
+        label: "Homepage, Program, KV, Submission & News"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - {label: "Tahun Festival", name: "festivalYear", widget: "string"}
+          - {label: "Edisi", name: "festivalEdition", widget: "string"}
+          - {label: "Status Tempat/Tanggal", name: "locationStatus", widget: "string"}
+          - {label: "KV / Hero Image", name: "heroImage", widget: "image", required: false}
+          - label: "Tentang FFJ"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Indonesia", name: "id", widget: "text"}
+              - {label: "English", name: "en", widget: "text"}
+          - label: "Submission"
+            name: "submission"
+            widget: "object"
+            fields:
+              - {label: "Sedang dibuka?", name: "isOpen", widget: "boolean", default: false}
+              - {label: "Link Form Submission", name: "url", widget: "string", required: false}
+              - {label: "Keterangan Indonesia", name: "id", widget: "text"}
+              - {label: "English description", name: "en", widget: "text"}
+          - label: "Program & Jadwal"
+            name: "programs"
+            widget: "list"
+            fields:
+              - {label: "Nama Program", name: "title", widget: "string"}
+              - {label: "Deskripsi", name: "description", widget: "text"}
+              - {label: "Tanggal/Jam", name: "date", widget: "string"}
+          - label: "Arsip"
+            name: "archives"
+            widget: "list"
+            fields:
+              - {label: "Judul", name: "title", widget: "string"}
+              - {label: "Deskripsi", name: "description", widget: "text"}
+              - {label: "Link", name: "url", widget: "string", required: false}
+          - label: "Kabar Terbaru"
+            name: "updates"
+            widget: "list"
+            fields:
+              - {label: "Judul", name: "title", widget: "string"}
+              - {label: "Tanggal", name: "date", widget: "date", format: "YYYY-MM-DD"}
+              - {label: "Isi Ringkas", name: "description", widget: "text"}
+              - {label: "Link", name: "url", widget: "string", required: false}

@@ -1,0 +1,28 @@
+{
+  "festivalYear": "2027",
+  "festivalEdition": "VOL. 03",
+  "locationStatus": "DETAIL MENYUSUL",
+  "about": {
+    "id": "Festival Film Jelek adalah ruang untuk film-film yang berani mengambil risiko, bereksperimen, dan hadir apa adanya. Kami percaya setiap orang berhak berkarya tanpa takut dinilai jelek.",
+    "en": "Festival Film Jelek is a space for films that take risks, experiment, and show up as they are. We believe everyone deserves to create without fear of being called bad."
+  },
+  "submission": {
+    "isOpen": false,
+    "url": "",
+    "id": "Pendaftaran film FFJ 2027 belum dibuka. Pantau halaman ini untuk informasi persyaratan dan tanggal submission.",
+    "en": "FFJ 2027 film submissions are not open yet. Watch this page for requirements and opening dates."
+  },
+  "programs": [
+    {"title":"Film Screenings","description":"Program pemutaran film — jadwal akan diumumkan.","date":"TBA"},
+    {"title":"FFJ Talks","description":"Diskusi dan percakapan seputar sinema.","date":"TBA"},
+    {"title":"Special Programs","description":"Eksperimen, kolaborasi, dan kejutan.","date":"TBA"}
+  ],
+  "archives": [
+    {"title":"FFJ VOL. 02","description":"2026 · Jakarta · Arsip program dan dokumentasi menyusul.","url":""},
+    {"title":"FFJ VOL. 01","description":"Arsip edisi perdana — konten menyusul.","url":""}
+  ],
+  "updates": [
+    {"title":"FFJ 2027 — Coming Soon","date":"2026-11-10","description":"Informasi resmi mengenai FFJ 2027 akan diumumkan melalui kanal festival.","url":""}
+  ],
+  "heroImage": ""
+}
