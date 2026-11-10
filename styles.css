@@ -1124,3 +1124,25 @@ h1, h2, h3 {
   background: #f4ecdd;
   color: #171414;
 }
+
+
+/* FFJ INSTAGRAM CONTACT */
+
+.office-instagram {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.instagram-link {
+  display: inline-block;
+  color: #171414;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(22px, 4vw, 42px);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.instagram-link:hover {
+  color: #ff5b9b;
+}
