@@ -281,3 +281,8 @@ render = function () {
   originalRender();
   if (data) setupArchiveGallery();
 };
+
+render = function () {
+  originalRender();
+  if (data) setupArchiveGallery();
+};
