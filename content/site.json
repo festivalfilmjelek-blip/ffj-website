@@ -1,3 +1,4 @@
+
 {
   "festivalYear": "2027",
   "festivalEdition": "VOL. 03",
@@ -13,16 +14,65 @@
     "en": "FFJ 2027 film submissions are not open yet. Watch this page for requirements and opening dates."
   },
   "programs": [
-    {"title":"Film Screenings","description":"Program pemutaran film — jadwal akan diumumkan.","date":"TBA"},
-    {"title":"FFJ Talks","description":"Diskusi dan percakapan seputar sinema.","date":"TBA"},
-    {"title":"Special Programs","description":"Eksperimen, kolaborasi, dan kejutan.","date":"TBA"}
+    {
+      "title": "Film Screenings",
+      "description": "Program pemutaran film — jadwal akan diumumkan.",
+      "date": "TBA"
+    },
+    {
+      "title": "FFJ Talks",
+      "description": "Diskusi dan percakapan seputar sinema.",
+      "date": "TBA"
+    },
+    {
+      "title": "Special Programs",
+      "description": "Eksperimen, kolaborasi, dan kejutan.",
+      "date": "TBA"
+    }
   ],
   "archives": [
-    {"title":"FFJ VOL. 02","description":"2026 · Jakarta · Arsip program dan dokumentasi menyusul.","url":""},
-    {"title":"FFJ VOL. 01","description":"Arsip edisi perdana — konten menyusul.","url":""}
+    {
+      "id": "ffj-vol2",
+      "title": "FFJ VOL. 02",
+      "date": "1–3 Mei 2026",
+      "description": "Festival Film Jelek Vol. 2 diselenggarakan di Komunitas Utan Kayu, Jakarta. Menghadirkan program pemutaran film, diskusi, pameran, serta pertemuan para filmmaker dan penonton. Lebih dari 1.150 pengunjung hadir merayakan keberanian berkarya tanpa takut jelek.",
+      "images": [
+        "assets/ffj-vol2/EWP07153.webp",
+        "assets/ffj-vol2/EWP07676.webp",
+        "assets/ffj-vol2/EWP07679.webp",
+        "assets/ffj-vol2/EWP07716.webp",
+        "assets/ffj-vol2/EWP08077.webp",
+        "assets/ffj-vol2/EWP08117.webp",
+        "assets/ffj-vol2/EWP08169.webp",
+        "assets/ffj-vol2/EWP08310.webp",
+        "assets/ffj-vol2/EWP08629.webp",
+        "assets/ffj-vol2/EWP08737.webp",
+        "assets/ffj-vol2/IMG_4914.webp",
+        "assets/ffj-vol2/IMG_5124.webp"
+      ]
+    },
+    {
+      "id": "ffj-vol1",
+      "title": "FFJ VOL. 01",
+      "date": "",
+      "description": "Edisi perdana Festival Film Jelek. Dokumentasi dan arsip program segera hadir.",
+      "images": []
+    },
+    {
+      "id": "ffj-bertamasya",
+      "title": "FFJ BERTAMASYA",
+      "date": "2026",
+      "description": "Festival Film Jelek bertamasya ke berbagai kota, membawa film-film pilihan dan mempertemukan komunitas sinema melalui pemutaran dan diskusi.",
+      "images": []
+    }
   ],
   "updates": [
-    {"title":"FFJ 2027 — Coming Soon","date":"2026-11-10","description":"Informasi resmi mengenai FFJ 2027 akan diumumkan melalui kanal festival.","url":""}
+    {
+      "title": "FFJ 2027 — Coming Soon",
+      "date": "2026-11-10",
+      "description": "Informasi resmi mengenai Festival Film Jelek 2027 akan diumumkan melalui kanal festival.",
+      "url": ""
+    }
   ],
   "heroImage": ""
 }
