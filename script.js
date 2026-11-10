@@ -172,3 +172,112 @@ fetch('content/site.json')
   });
 
 render();
+
+
+/* ========================================
+   FFJ ARCHIVE PHOTO GALLERY
+   ======================================== */
+
+function setupArchiveGallery() {
+  const archive = document.getElementById('archiveCards');
+  if (!archive || !data) return;
+
+  archive.innerHTML = (data.archives || []).map((item, index) => {
+    const images = Array.isArray(item.images) ? item.images : [];
+    const cover = images[0];
+
+    return `
+      <article class="tile archive-item">
+        ${cover ? `
+          <img
+            src="${safe(cover)}"
+            alt="${safe(item.title)}"
+            class="archive-cover"
+            loading="lazy"
+          >
+        ` : ''}
+
+        <span class="num">${safe(item.date || '')}</span>
+        <h3>${safe(item.title)}</h3>
+        <p>${safe(item.description)}</p>
+
+        ${images.length ? `
+          <button class="archive-open" data-index="${index}">
+            LIHAT DOKUMENTASI ↗
+          </button>
+        ` : '<span>DOKUMENTASI MENYUSUL</span>'}
+      </article>
+    `;
+  }).join('');
+
+  archive.querySelectorAll('.archive-open').forEach(button => {
+    button.addEventListener('click', () => {
+      const index = Number(button.dataset.index);
+      openArchiveGallery(data.archives[index]);
+    });
+  });
+}
+
+function openArchiveGallery(item) {
+  const images = item.images || [];
+  if (!images.length) return;
+
+  let current = 0;
+
+  const modal = document.createElement('div');
+  modal.className = 'ffj-gallery-modal';
+
+  modal.innerHTML = `
+    <button class="gallery-close" aria-label="Tutup">✕</button>
+    <button class="gallery-prev" aria-label="Sebelumnya">‹</button>
+    <img class="gallery-photo" alt="Dokumentasi FFJ">
+    <button class="gallery-next" aria-label="Berikutnya">›</button>
+    <div class="gallery-counter"></div>
+  `;
+
+  document.body.appendChild(modal);
+  document.body.style.overflow = 'hidden';
+
+  function showPhoto() {
+    modal.querySelector('.gallery-photo').src = images[current];
+    modal.querySelector('.gallery-counter').textContent =
+      `${current + 1} / ${images.length}`;
+  }
+
+  function close() {
+    modal.remove();
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', keyboard);
+  }
+
+  function keyboard(event) {
+    if (event.key === 'Escape') close();
+    if (event.key === 'ArrowRight') next();
+    if (event.key === 'ArrowLeft') prev();
+  }
+
+  function next() {
+    current = (current + 1) % images.length;
+    showPhoto();
+  }
+
+  function prev() {
+    current = (current - 1 + images.length) % images.length;
+    showPhoto();
+  }
+
+  modal.querySelector('.gallery-close').onclick = close;
+  modal.querySelector('.gallery-next').onclick = next;
+  modal.querySelector('.gallery-prev').onclick = prev;
+
+  document.addEventListener('keydown', keyboard);
+  showPhoto();
+}
+
+/* Run after site.json has loaded */
+const originalRender = render;
+
+render = function () {
+  originalRender();
+  if (data) setupArchiveGallery();
+};
