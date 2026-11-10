@@ -74,5 +74,87 @@
       "url": ""
     }
   ],
+  "press": [
+    {
+      "date": "30 MAR 2026",
+      "sortDate": "2026-03-30",
+      "media": "DW INDONESIA",
+      "title": "Festival Film Jelek: Ruang Alternatif bagi Sineas Pemula",
+      "description": "Liputan mengenai Festival Film Jelek sebagai ruang alternatif bagi sineas pemula.",
+      "url": "https://www.dw.com/id/festival-film-jelek-ruang-alternatif-bagi-sineas-pemula/a-76587248"
+    },
+    {
+      "date": "13 APR 2026",
+      "sortDate": "2026-04-13",
+      "media": "ULTIMAGZ",
+      "title": "Festival Film Jelek Menggelar Volume 2",
+      "description": "Liputan mengenai penyelenggaraan Festival Film Jelek Volume 2.",
+      "url": "https://ultimagz.com/hiburan/festival-film-jelek-menggelar-volume-2/"
+    },
+    {
+      "date": "18 APR 2026",
+      "sortDate": "2026-04-18",
+      "media": "INFOSCREENING",
+      "title": "Festival Film Jelek Volume 2 Diselenggarakan Mei 2026",
+      "description": "Informasi mengenai penyelenggaraan FFJ Volume 2.",
+      "url": "https://infoscreening.id/festival-film-jelek-volume-2-diselenggarakan-mei-2026/"
+    },
+    {
+      "date": "2 MEI 2026",
+      "sortDate": "2026-05-02",
+      "media": "MINIKINO",
+      "title": "Festival Film Jelek: Menertawakan yang Buruk, atau Merayakan Kekosongan?",
+      "description": "Tulisan kritis yang membahas gagasan dan pendekatan Festival Film Jelek.",
+      "url": "https://minikino.org/articles/festival-film-jelek-menertawakan-yang-buruk-atau-merayakan-kekosongan/"
+    },
+    {
+      "date": "13 MEI 2026",
+      "sortDate": "2026-05-13",
+      "media": "VOLIX",
+      "title": "Festival Film Jelek: Wadah untuk Filmmaker di Luar Standar",
+      "description": "Microblog mengenai FFJ dan keberanian membuat karya yang berbeda.",
+      "url": "https://volix.co.id/microblog/festival-film-jelek-ffj-wadah-untuk-filmmaker-yang-bangga-karyanya-disebut-jelek-dan-di-luar-standar"
+    },
+    {
+      "date": "30 JUL 2026",
+      "sortDate": "2026-07-30",
+      "media": "RRI",
+      "title": "Festival Film Jelek Bertamasya Bawa Sinema Alternatif ke Bandung",
+      "description": "Liputan perjalanan program FFJ Bertamasya ke Bandung.",
+      "url": "https://rri.co.id/bandung/hiburan/2611850/festival-film-jelek-bertamasya-bawa-sinema-alternatif-ke-bandung"
+    },
+    {
+      "date": "9 OKT 2026",
+      "sortDate": "2026-10-09",
+      "media": "ARAHMATA",
+      "title": "Festival Film Jelek: Ruang Kreatif Bebas Gagal",
+      "description": "Artikel mengenai kebebasan bereksperimen dan ruang untuk kegagalan dalam berkarya.",
+      "url": "https://arahmata.co.id/id/artikel/festival-film-jelek-ruang-kreatif-bebas-gagal"
+    },
+    {
+      "date": "TANGGAL BELUM DIKONFIRMASI",
+      "sortDate": "",
+      "media": "KOMPAS.ID",
+      "title": "Film Jelek Juga Bisa Bersinar",
+      "description": "Liputan mengenai Festival Film Jelek.",
+      "url": "https://www.kompas.id/artikel/film-jelek-juga-bisa-bersinar"
+    },
+    {
+      "date": "TANGGAL BELUM DIKONFIRMASI",
+      "sortDate": "",
+      "media": "TEMPO",
+      "title": "Glitchman dan Festival Film Jelek di Utan Kayu",
+      "description": "Artikel mengenai Glitchman dan Festival Film Jelek.",
+      "url": "https://www.tempo.co/teroka/glitchman-festival-film-jelek-utan-kayu-2133084"
+    },
+    {
+      "date": "TANGGAL BELUM DIKONFIRMASI",
+      "sortDate": "",
+      "media": "KOMPAS ADVERTORIAL",
+      "title": "Festival Film Jelek Bertamasya Membawa Film Gagal Menemui Penonton",
+      "description": "Artikel mengenai perjalanan FFJ Bertamasya.",
+      "url": "https://adv.kompas.id/baca/festival-film-jelek-bertamasya-membawa-film-gagal-menemui-penonton/"
+    }
+  ],
   "heroImage": ""
 }
