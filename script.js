@@ -286,3 +286,91 @@ render = function () {
   originalRender();
   if (data) setupArchiveGallery();
 };
+
+
+/* ========================================
+   FFJ IN THE PRESS
+   ======================================== */
+
+let pressVisibleCount = 6;
+
+function renderFFJPress() {
+  const container = document.getElementById('pressCards');
+  const moreButton = document.getElementById('pressLoadMore');
+
+  if (!container || !moreButton || !data) return;
+
+  const articles = [...(data.press || [])].sort((a, b) => {
+    if (!a.sortDate && !b.sortDate) return 0;
+    if (!a.sortDate) return 1;
+    if (!b.sortDate) return -1;
+
+    return a.sortDate.localeCompare(b.sortDate);
+  });
+
+  const visibleArticles = articles.slice(0, pressVisibleCount);
+
+  container.innerHTML = visibleArticles.map(article => {
+    const url = String(article.url || '');
+    const validUrl = /^https?:\/\//i.test(url);
+
+    return `
+      <article class="press-card">
+
+        <div class="press-card-top">
+          <span class="press-media">
+            ${safe(article.media)}
+          </span>
+
+          <span class="press-date">
+            ${safe(article.date)}
+          </span>
+        </div>
+
+        <h3>${safe(article.title)}</h3>
+
+        <p>${safe(article.description)}</p>
+
+        ${validUrl ? `
+          <a
+            href="${safe(url)}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="press-read"
+          >
+            READ ARTICLE ↗
+          </a>
+        ` : ''}
+
+      </article>
+    `;
+  }).join('');
+
+  moreButton.hidden = pressVisibleCount >= articles.length;
+}
+
+/* Integrate press with existing render function */
+
+const previousFFJRender = render;
+
+render = function () {
+  previousFFJRender();
+  renderFFJPress();
+};
+
+/* Load more articles */
+
+const pressMoreButton = document.getElementById('pressLoadMore');
+
+if (pressMoreButton) {
+  pressMoreButton.addEventListener('click', () => {
+    pressVisibleCount += 6;
+    renderFFJPress();
+  });
+}
+
+/* Refresh when data has already loaded */
+
+if (data) {
+  renderFFJPress();
+}
