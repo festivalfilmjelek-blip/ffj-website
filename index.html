@@ -1,10 +1,276 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#151313"><meta name="description" content="Festival Film Jelek — ruang untuk film yang berani berbeda. Informasi festival, program, submission, dan arsip."><title>Festival Film Jelek — FFJ 2027</title><link rel="stylesheet" href="styles.css"></head><body>
-<header class="nav"><a href="#home" class="brand"><img src="assets/ffj-logo.png" alt="Festival Film Jelek"></a><button class="menu" id="menu" aria-label="Buka menu">☰</button><nav id="links"><a href="#about" data-i="navAbout">Tentang</a><a href="#program" data-i="navProgram">Program</a><a href="#submission" data-i="navSubmit">Submission</a><a href="#archive" data-i="navArchive">Arsip</a><a href="#updates" data-i="navNews">Kabar</a><a href="#contact" data-i="navContact">Kontak</a><button id="lang" aria-label="Ganti bahasa">EN / ID</button></nav></header>
-<main><section id="home" class="hero"><div class="grain"></div><div class="hero-inner"><div class="stamp">✳ 2027 / VOL. 03 / JAKARTA? <span class="small" data-i="detailsTbd">DETAIL MENYUSUL</span></div><div class="headline"><span>FESTIVAL</span><span>FILM</span><span class="pink">JELEK<span class="asterisk">*</span></span></div><div class="hero-foot"><div><p class="overline">EST. INDEPENDENT CINEMA / INDONESIA</p><p class="tagline" data-i="tagline">BERANI BERKARYA<br>TANPA TAKUT JELEK.</p></div><div class="hero-cta"><a class="btn hot" href="#submission" data-i="ctaSubmit">SUBMIT FILM ↗</a><a class="btn outline" href="#program" data-i="ctaProgram">LIHAT PROGRAM ↗</a></div></div><div class="scribble">NOT PERFECT.<br>STILL A FILM.</div></div></section>
-<div class="ticker"><div>✳ FILM JELEK BUKAN BERARTI FILM BURUK &nbsp; ✳ &nbsp; MAKE SOMETHING WEIRD &nbsp; ✳ &nbsp; FILM JELEK BUKAN BERARTI FILM BURUK &nbsp; ✳ &nbsp; MAKE SOMETHING WEIRD &nbsp; ✳ &nbsp;</div></div>
-<section id="about" class="paper section"><div class="section-head"><span class="kicker">01 / WHO WE ARE</span><h2 data-i="aboutTitle">BUKAN SOAL<br>SEMPURNA.</h2></div><div class="two"><p class="lead" id="aboutText">Festival Film Jelek adalah ruang untuk film-film yang berani mengambil risiko, bereksperimen, dan hadir apa adanya. Kami percaya setiap orang berhak berkarya tanpa takut dinilai jelek.</p><div class="note"><span>✳</span><p data-i="aboutNote">Sebuah festival untuk karya yang terlalu aneh, terlalu jujur, atau terlalu berbeda untuk masuk kotak.</p></div></div></section>
-<section id="program" class="section dark"><div class="section-head"><span class="kicker">02 / THE LINEUP</span><h2 data-i="programTitle">PROGRAM<br>FESTIVAL</h2><p class="muted" data-i="programIntro">Program dan jadwal resmi FFJ 2027 akan diumumkan di sini.</p></div><div id="programCards" class="cards"></div></section>
-<section id="submission" class="section yellow"><span class="kicker">03 / CALL FOR ENTRIES</span><div class="submission-grid"><h2 data-i="submitTitle">PUNYA FILM<br>YANG ANEH?</h2><div><p class="lead" id="submissionText">Pendaftaran film FFJ 2027 belum dibuka. Pantau halaman ini untuk informasi persyaratan dan tanggal submission.</p><a id="submissionLink" class="btn black disabled" href="#updates" data-i="submitStatus">BELUM DIBUKA ↗</a><p class="tiny" data-i="submissionCaution">Jangan kirim film sebelum pengumuman resmi.</p></div></div></section>
-<section id="archive" class="section paper"><span class="kicker">04 / TIME MACHINE</span><h2 data-i="archiveTitle">ARSIP<br>KEJELEKAN.</h2><div id="archiveCards" class="archive-grid"></div></section>
-<section id="updates" class="section dark"><span class="kicker">05 / BULLETIN BOARD</span><h2 data-i="newsTitle">KABAR<br>TERBARU.</h2><div id="newsCards" class="news-grid"></div></section>
-<section id="contact" class="section contact"><span class="kicker">06 / SAY HELLO</span><h2 data-i="contactTitle">MAU BIKIN<br>RIBUT?</h2><p data-i="contactIntro">Untuk kolaborasi, media, dan pertanyaan seputar festival:</p><a class="mail" href="mailto:festivalfilmjelek@gmail.com">festivalfilmjelek@gmail.com ↗</a><div class="footer"><img src="assets/ffj-logo.png" alt="Logo FFJ"><span>© <span id="year"></span> FESTIVAL FILM JELEK · <span data-i="footer">DIBUAT DENGAN KEBERANIAN.</span></span><a href="#home">↑ TOP</a></div></section></main><script src="script.js"></script></body></html>
+
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#171414">
+  <meta name="description" content="Festival Film Jelek — ruang untuk film yang berani berbeda. Berani berkarya tanpa takut jelek.">
+
+  <title>Festival Film Jelek — FFJ 2027</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/favicon.png">
+
+  <!-- OPEN GRAPH / WHATSAPP / SOCIAL MEDIA -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Festival Film Jelek">
+  <meta property="og:title" content="Festival Film Jelek — FFJ 2027">
+  <meta property="og:description" content="Berani berkarya tanpa takut jelek. Festival film independen yang merayakan keberanian bereksperimen dan berkarya.">
+  <meta property="og:url" content="https://festivalfilmjelek.com/">
+  <meta property="og:image" content="https://festivalfilmjelek.com/assets/ffj-thumbnail.jpg">
+  <meta property="og:image:secure_url" content="https://festivalfilmjelek.com/assets/ffj-thumbnail.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo Festival Film Jelek dengan latar hitam">
+
+  <!-- X / TWITTER PREVIEW -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Festival Film Jelek — FFJ 2027">
+  <meta name="twitter:description" content="Berani berkarya tanpa takut jelek.">
+  <meta name="twitter:image" content="https://festivalfilmjelek.com/assets/ffj-thumbnail.jpg">
+
+  <!-- WEBSITE STYLES -->
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="nav">
+    <a href="#home" class="brand">
+      <img src="assets/ffj-logo.png" alt="Festival Film Jelek">
+    </a>
+
+    <button class="menu" id="menu" aria-label="Buka menu">☰</button>
+
+    <nav id="links">
+      <a href="#about" data-i="navAbout">Tentang</a>
+      <a href="#program" data-i="navProgram">Program</a>
+      <a href="#submission" data-i="navSubmit">Submission</a>
+      <a href="#archive" data-i="navArchive">Arsip</a>
+      <a href="#updates" data-i="navNews">Kabar</a>
+      <a href="#contact" data-i="navContact">Kontak</a>
+      <button id="lang" aria-label="Ganti bahasa">EN / ID</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME / HERO -->
+    <section id="home" class="hero">
+      <div class="grain"></div>
+
+      <div class="hero-inner">
+
+        <div class="stamp">
+          ✳ 2027 / VOL. 03 /
+          <span class="small" data-i="detailsTbd">DETAIL MENYUSUL</span>
+        </div>
+
+        <div class="headline">
+          <span>FESTIVAL</span>
+          <span>FILM</span>
+          <span class="pink">JELEK<span class="asterisk">*</span></span>
+        </div>
+
+        <div class="hero-foot">
+          <div>
+            <p class="overline">EST. INDEPENDENT CINEMA / INDONESIA</p>
+
+            <p class="tagline" data-i="tagline">
+              BERANI BERKARYA<br>
+              TANPA TAKUT JELEK.
+            </p>
+          </div>
+
+          <div class="hero-cta">
+            <a class="btn hot" href="#submission" data-i="ctaSubmit">
+              SUBMIT FILM ↗
+            </a>
+
+            <a class="btn outline" href="#program" data-i="ctaProgram">
+              LIHAT PROGRAM ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="scribble">
+          NOT PERFECT.<br>
+          STILL A FILM.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RUNNING TEXT -->
+    <div class="ticker">
+      <div>
+        ✳ FILM JELEK BUKAN BERARTI FILM BURUK
+        &nbsp; ✳ &nbsp; MAKE SOMETHING WEIRD
+        &nbsp; ✳ &nbsp; FILM JELEK BUKAN BERARTI FILM BURUK
+        &nbsp; ✳ &nbsp; MAKE SOMETHING WEIRD
+        &nbsp; ✳ &nbsp;
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="paper section">
+
+      <div class="section-head">
+        <span class="kicker">01 / WHO WE ARE</span>
+
+        <h2 data-i="aboutTitle">
+          BUKAN SOAL<br>
+          SEMPURNA.
+        </h2>
+      </div>
+
+      <div class="two">
+        <p class="lead" id="aboutText">
+          Festival Film Jelek adalah ruang untuk film-film yang
+          berani mengambil risiko, bereksperimen, dan hadir apa
+          adanya. Kami percaya setiap orang berhak berkarya
+          tanpa takut dinilai jelek.
+        </p>
+
+        <div class="note">
+          <span>✳</span>
+
+          <p data-i="aboutNote">
+            Sebuah festival untuk karya yang terlalu aneh,
+            terlalu jujur, atau terlalu berbeda untuk masuk kotak.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PROGRAM -->
+    <section id="program" class="section dark">
+
+      <div class="section-head">
+        <span class="kicker">02 / THE LINEUP</span>
+
+        <h2 data-i="programTitle">
+          PROGRAM<br>
+          FESTIVAL
+        </h2>
+
+        <p class="muted" data-i="programIntro">
+          Program dan jadwal resmi FFJ 2027 akan diumumkan di sini.
+        </p>
+      </div>
+
+      <div id="programCards" class="cards"></div>
+
+    </section>
+
+    <!-- SUBMISSION -->
+    <section id="submission" class="section yellow">
+
+      <span class="kicker">03 / CALL FOR ENTRIES</span>
+
+      <div class="submission-grid">
+
+        <h2 data-i="submitTitle">
+          PUNYA FILM<br>
+          YANG ANEH?
+        </h2>
+
+        <div>
+          <p class="lead" id="submissionText">
+            Pendaftaran film FFJ 2027 belum dibuka.
+            Pantau halaman ini untuk informasi persyaratan
+            dan tanggal submission.
+          </p>
+
+          <a
+            id="submissionLink"
+            class="btn black disabled"
+            href="#updates"
+            data-i="submitStatus"
+          >
+            BELUM DIBUKA ↗
+          </a>
+
+          <p class="tiny" data-i="submissionCaution">
+            Jangan kirim film sebelum pengumuman resmi.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ARSIP FEFILEK -->
+    <section id="archive" class="section paper">
+
+      <span class="kicker">04 / TIME MACHINE</span>
+
+      <h2 data-i="archiveTitle">
+        ARSIP<br>
+        FEFILEK.
+      </h2>
+
+      <div id="archiveCards" class="archive-grid"></div>
+
+    </section>
+
+    <!-- NEWS -->
+    <section id="updates" class="section dark">
+
+      <span class="kicker">05 / BULLETIN BOARD</span>
+
+      <h2 data-i="newsTitle">
+        KABAR<br>
+        TERBARU.
+      </h2>
+
+      <div id="newsCards" class="news-grid"></div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+
+      <span class="kicker">06 / SAY HELLO</span>
+
+      <h2 data-i="contactTitle">
+        MAU BIKIN<br>
+        RIBUT?
+      </h2>
+
+      <p data-i="contactIntro">
+        Untuk kolaborasi, media, dan pertanyaan seputar festival:
+      </p>
+
+      <a class="mail" href="mailto:festivalfilmjelek@gmail.com">
+        festivalfilmjelek@gmail.com ↗
+      </a>
+
+      <!-- FOOTER -->
+      <div class="footer">
+
+        <img src="assets/ffj-logo.png" alt="Logo FFJ">
+
+        <span>
+          © <span id="year"></span> FESTIVAL FILM JELEK ·
+          <span data-i="footer">DIBUAT DENGAN KEBERANIAN.</span>
+        </span>
+
+        <a href="#home">↑ TOP</a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- WEBSITE JAVASCRIPT -->
+  <script src="script.js?v=4"></script>
+
+</body>
+</html>
