@@ -1085,3 +1085,42 @@ h1, h2, h3 {
     animation: none;
   }
 }
+
+
+/* FFJ OFFICE ADDRESS */
+
+.office-address {
+  margin: 0 0 70px;
+  padding: 28px 0;
+  border-top: 2px solid #171414;
+  border-bottom: 2px solid #171414;
+}
+
+.office-label {
+  margin-bottom: 18px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.office-address address {
+  font-style: normal;
+  font-size: clamp(17px, 2vw, 25px);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.office-map {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 16px;
+  background: #171414;
+  color: #f4ecdd;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.office-map:hover {
+  background: #f4ecdd;
+  color: #171414;
+}
