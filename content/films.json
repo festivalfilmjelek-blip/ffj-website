@@ -13,7 +13,7 @@
     "program": "CGI (CINEMA GHOIB INDONESIA)",
     "posterDriveId": "",
     "stillDriveId": "1JsNZOGebqBiNyN-cNGunT7PsjX55GfHQ",
-    "poster": "",
+    "poster": "/assets/films/posters/polisi-dadakan.webp",
     "still": "https://drive.google.com/thumbnail?id=1JsNZOGebqBiNyN-cNGunT7PsjX55GfHQ&sz=w1600",
     "synopsis": "Seorang Polisi Dadakan bersama rekannya masuk ke sebuah hutan untuk menangkap dalang dari pencurian sendal warga desa!"
   },
@@ -139,7 +139,7 @@
     "program": "BKT (BANJIR KHAYALAN TINGGI)",
     "posterDriveId": "",
     "stillDriveId": "1UUTmlDqz8PkhZ4Fu1LSvQ6EiCI_yfvnY",
-    "poster": "",
+    "poster": "/assets/films/posters/delon-1950.webp",
     "still": "https://drive.google.com/thumbnail?id=1UUTmlDqz8PkhZ4Fu1LSvQ6EiCI_yfvnY&sz=w1600",
     "synopsis": "Delon hidup di tahun 1950, ingin membeli TV dari masa depan demi mengejar wanita impiannya, namun menyesal dan menyadari dampak globalisasi."
   },
@@ -175,7 +175,7 @@
     "program": "BKT (BANJIR KHAYALAN TINGGI)",
     "posterDriveId": "",
     "stillDriveId": "",
-    "poster": "",
+    "poster": "/assets/films/posters/tarputer555.webp",
     "still": "",
     "synopsis": "Setelah ditolak sebuah perusahaan, seorang pengangguran mencari lowongan pekerjaan melalui sebuah situs. Perhatiannya justru teralihkan oleh iklan judi daring yang terus bermunculan."
   },
@@ -627,7 +627,7 @@
     "program": "SHORT CIRCUIT",
     "posterDriveId": "",
     "stillDriveId": "",
-    "poster": "",
+    "poster": "/assets/films/posters/lu-sape-mpruy.webp",
     "still": "",
     "synopsis": "Seorang lelaki bernama Agha mendengar temannya memanggil dirinya, namun ternyata itu bukan temannya."
   },
@@ -645,7 +645,7 @@
     "program": "SHORT CIRCUIT",
     "posterDriveId": "",
     "stillDriveId": "",
-    "poster": "",
+    "poster": "/assets/films/posters/tindihan.webp",
     "still": "",
     "synopsis": "Perdi (26), pekerja film yang pulang dalam keadaan lelah, segera berbaring. Ketika hendak tidur, ia melihat sekelompok orang berkepala botak dan berwajah putih yang berteriak memanggil namanya."
   },
@@ -753,7 +753,7 @@
     "program": "SHORT CIRCUIT",
     "posterDriveId": "",
     "stillDriveId": "",
-    "poster": "",
+    "poster": "/assets/films/posters/oke-gust.webp",
     "still": "",
     "synopsis": "Ketika keadaan negara semakin menakutkan, lelaki ini dihantui pilihannya sendiri."
   }
