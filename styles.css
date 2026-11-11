@@ -1437,3 +1437,16 @@ h1, h2, h3 {
 
 /* FFJ Vol.02 archive V2 */
 .film-edition-pill{display:inline-block;background:#ff5b9b;color:#171414;padding:10px 15px;font-family:"Archivo Black",sans-serif;font-size:13px;margin-bottom:16px;border:2px solid #171414}.film-card:focus-visible{outline:4px solid #ff5b9b;outline-offset:4px}.film-card:hover .film-poster{outline:3px solid #ff5b9b;outline-offset:3px}@media(max-width:600px){.film-grid{gap:12px}.film-card{padding:8px}.film-card h3{font-size:14px}.film-card p{font-size:12px}.film-placeholder{padding:9px;min-height:0}.film-placeholder strong{font-size:clamp(12px,3.4vw,18px)}.film-placeholder span,.film-placeholder small{font-size:8px}}
+
+/* FFJ CONTACT ICON CARDS — NOV 2026 */
+.ffj-contact-channels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:34px 0 56px}
+.ffj-contact-card{display:flex;align-items:center;gap:16px;min-width:0;padding:22px 20px;border:3px solid var(--black);background:var(--black);color:var(--paper);text-decoration:none;box-shadow:6px 6px 0 var(--yellow);transition:transform .18s ease,box-shadow .18s ease}
+.ffj-contact-card:hover,.ffj-contact-card:focus-visible{transform:translate(-2px,-2px);box-shadow:9px 9px 0 var(--yellow)}
+.ffj-contact-icon{display:grid;place-items:center;flex:0 0 54px;width:54px;height:54px;background:var(--yellow);color:var(--black);border:2px solid var(--black)}
+.ffj-contact-icon-instagram{background:var(--pink)}
+.ffj-contact-icon svg{width:30px;height:30px}
+.ffj-contact-info{display:flex;flex:1;min-width:0;flex-direction:column;gap:7px}
+.ffj-contact-label{font-size:11px;font-weight:900;letter-spacing:.09em}
+.ffj-contact-value{font-family:'Archivo Black',sans-serif;font-size:clamp(13px,1.4vw,18px);overflow-wrap:anywhere}
+.ffj-contact-arrow{font-size:24px;align-self:flex-start}
+@media(max-width:780px){.ffj-contact-channels{grid-template-columns:1fr;gap:16px}.ffj-contact-card{padding:16px 14px}.ffj-contact-icon{flex-basis:46px;width:46px;height:46px}.ffj-contact-icon svg{width:26px;height:26px}}
