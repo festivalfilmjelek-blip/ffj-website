@@ -29,3 +29,6 @@
 .p2-hero-poster{margin:0;min-width:0}
 .p2-hero-poster img{display:block;width:100%;height:auto;max-height:590px;object-fit:contain;filter:drop-shadow(10px 10px 0 #ff5b9b)}
 @media(max-width:850px){.p2-hero-layout{grid-template-columns:1fr}.p2-hero-copy h1{font-size:clamp(44px,10vw,90px);white-space:normal}.p2-hero-poster{max-width:430px;margin:8px auto 0;width:100%}}
+
+/* FFJ Awards: winner posters for programs without speech videos */
+.p2-winner-poster{display:block;margin-top:15px;border:2px solid #171414;background:#171414;overflow:hidden}.p2-winner-poster img{display:block;width:100%;height:auto;max-height:580px;object-fit:contain}.p2-winner-poster:focus-visible{outline:4px solid #ff5b9b;outline-offset:3px}
