@@ -1,4 +1,4 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#171414"><meta name="description" content="Festival Film Jelek — berani berkarya tanpa takut jelek."><title>Program — Festival Film Jelek</title><link rel="icon" href="/assets/favicon.png"><link rel="apple-touch-icon" href="/assets/favicon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="Festival Film Jelek"><meta property="og:title" content="Program — Festival Film Jelek"><meta property="og:image" content="https://festivalfilmjelek.com/assets/ffj-thumbnail.jpg"><link rel="stylesheet" href="/styles.css?v=10"></head><body><div aria-label="Loading Festival Film Jelek" class="ffj-loader" id="ffj-loader" role="status">
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#171414"><meta name="description" content="Festival Film Jelek — berani berkarya tanpa takut jelek."><title>Program & Jadwal Pemutaran — Festival Film Jelek</title><link rel="icon" href="/assets/favicon.png"><link rel="apple-touch-icon" href="/assets/favicon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="Festival Film Jelek"><meta property="og:title" content="Program — Festival Film Jelek"><meta property="og:image" content="https://festivalfilmjelek.com/assets/ffj-thumbnail.jpg"><link rel="stylesheet" href="/styles.css?v=10"><link rel="stylesheet" href="/program/schedule.css?v=1"></head><body><div aria-label="Loading Festival Film Jelek" class="ffj-loader" id="ffj-loader" role="status">
 <div class="ffj-loader-screen">
 <div class="ffj-loader-top">
 <span>FFJ.EXE</span>
@@ -25,15 +25,27 @@
       </div>
 </div>
 </div>
-</div><header class="nav"><a href="/" class="brand"><img src="/assets/ffj-logo.png" alt="Festival Film Jelek"></a><button class="menu" id="menu" aria-label="Buka menu" aria-expanded="false">☰</button><nav id="links"><a href="/about/" data-i="navAbout">Tentang</a><a href="/program/" data-i="navProgram">Program</a><a href="/films/">Films</a><a href="/submission/" data-i="navSubmit">Submission</a><a href="/archive/" data-i="navArchive">Arsip</a><a href="/news/" data-i="navNews">Kabar</a><a href="/press/">Press</a><a href="/contact/" data-i="navContact">Kontak</a><button id="lang" aria-label="Ganti bahasa">EN / ID</button></nav></header><main><div class="page-intro"><span class="kicker">02 / THE LINEUP</span><h1>PROGRAM.</h1><p>Program festival FFJ 2027.</p></div><section class="section dark" id="program">
-<div class="section-head">
-<span class="kicker">02 / THE LINEUP</span>
-<h2 data-i="programTitle">
-          PROGRAM<br/>FESTIVAL
-        </h2>
-<p class="muted" data-i="programIntro">
-          Program dan jadwal resmi FFJ 2027 akan diumumkan di sini.
-        </p>
-</div>
-<div class="cards" id="programCards"></div>
-</section></main><footer class="site-footer"><a href="/">✳ FESTIVAL FILM JELEK</a><span>© <span id="year"></span> · <span data-i="footer">DIBUAT DENGAN KEBERANIAN.</span></span><a href="https://www.instagram.com/festivalfilmjelek/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a></footer><script src="/script.js?v=10"></script></body></html>
+</div><header class="nav"><a href="/" class="brand"><img src="/assets/ffj-logo.png" alt="Festival Film Jelek"></a><button class="menu" id="menu" aria-label="Buka menu" aria-expanded="false">☰</button><nav id="links"><a href="/about/" data-i="navAbout">Tentang</a><a href="/program/" data-i="navProgram">Program</a><a href="/films/">Films</a><a href="/submission/" data-i="navSubmit">Submission</a><a href="/archive/" data-i="navArchive">Arsip</a><a href="/news/" data-i="navNews">Kabar</a><a href="/press/">Press</a><a href="/contact/" data-i="navContact">Kontak</a><button id="lang" aria-label="Ganti bahasa">EN / ID</button></nav></header><main class="schedule-main">
+<section class="schedule-hero">
+  <span class="kicker">✳ FESTIVAL FILM JELEK / WHAT'S ON</span>
+  <h1>PROGRAM<span class="schedule-pink">.</span><br>& SCHEDULE<span class="schedule-pink">✳</span></h1>
+  <p>Semua pemutaran, festival, roadshow, diskusi, dan workshop FFJ. Cari kegiatan, lihat detailnya, lalu menuju halaman tiket resmi jika tersedia.</p>
+  <div class="schedule-hero-note">BERANI BERKARYA TANPA TAKUT JELEK. ↗</div>
+</section>
+<section class="schedule-panel" aria-label="Program dan jadwal">
+ <div class="schedule-toolbar">
+  <div class="schedule-toolbar-head"><h2>WHAT'S ON?</h2><span id="scheduleCount" aria-live="polite"></span></div>
+  <div class="schedule-controls">
+   <label class="schedule-field">CARI PROGRAM<input id="scheduleSearch" type="search" placeholder="Judul, kota, lokasi…" autocomplete="off"></label>
+   <label class="schedule-field">JENIS KEGIATAN<select id="scheduleType"><option value="all">Semua kegiatan</option><option value="festival">Festival utama</option><option value="roadshow">Roadshow</option><option value="screening">Screening</option><option value="talk">Talks</option><option value="workshop">Workshop</option></select></label>
+   <label class="schedule-field">STATUS<select id="scheduleStatus"><option value="all">Semua status</option><option value="upcoming">Akan datang</option><option value="past">Arsip kegiatan</option></select></label>
+  </div>
+  <div class="schedule-tabs" role="group" aria-label="Mode tampilan">
+    <button type="button" id="scheduleListTab" class="is-active" aria-pressed="true">☷ JADWAL</button>
+    <button type="button" id="scheduleGridTab" aria-pressed="false">▦ PROGRAM</button>
+  </div>
+ </div>
+ <div id="scheduleResults" class="schedule-results" aria-live="polite"><p>Memuat jadwal…</p></div>
+</section>
+<section class="schedule-footer-note"><span>✳ ADA ACARA FFJ YANG BELUM TERCANTUM?</span><p>Informasi program dan tiket akan diperbarui melalui kanal resmi Festival Film Jelek.</p><a href="/contact/">HUBUNGI KAMI ↗</a></section>
+</main><footer class="site-footer"><a href="/">✳ FESTIVAL FILM JELEK</a><span>© <span id="year"></span> · <span data-i="footer">DIBUAT DENGAN KEBERANIAN.</span></span><a href="https://www.instagram.com/festivalfilmjelek/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a></footer><script src="/script.js?v=10"></script><script src="/program/schedule.js?v=1" defer></script></body></html>
