@@ -1436,3 +1436,8 @@ h1, h2, h3 {
 .hero-brand-logo { width: min(76vw, 950px); max-width: 100%; }
 .hero-brand-logo img { display: block; width: 100%; height: auto; }
 @media (max-width: 700px) { .hero-brand-logo { width: 100%; } }
+
+/* FFJ homepage: keep the official hero logo within the initial viewport */
+.hero-brand-logo { width: min(56vw, 680px); max-width: 100%; }
+.hero-brand-logo img { display: block; width: 100%; height: auto; max-height: 51vh; object-fit: contain; object-position: left center; }
+@media (max-width: 700px) { .hero-brand-logo { width: min(90vw, 480px); } .hero-brand-logo img { max-height: 43vh; } }
