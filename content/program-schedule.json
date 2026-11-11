@@ -1,0 +1,56 @@
+{
+  "note": "Jadwal yang belum diumumkan sengaja dikosongkan. Tambahkan acara baru ke events; jangan isi tanggal/tiket sebelum resmi.",
+  "events": [
+    {
+      "id": "ffj-vol3",
+      "title": "Festival Film Jelek Vol. 3",
+      "type": "festival",
+      "status": "upcoming",
+      "date": "",
+      "endDate": "",
+      "time": "",
+      "venue": "",
+      "city": "Jakarta",
+      "description": "Edisi berikutnya Festival Film Jelek. Jadwal, lokasi, dan tiket resmi akan diumumkan.",
+      "films": [],
+      "ticketUrl": "",
+      "ticketStatus": "soon",
+      "detailUrl": "",
+      "featured": true
+    },
+    {
+      "id": "ffj-vol2",
+      "title": "Festival Film Jelek Vol. 2",
+      "type": "festival",
+      "status": "past",
+      "date": "2026-05-01",
+      "endDate": "2026-05-03",
+      "time": "14.00–21.00 WIB (jam operasional festival; bukan jam tiap sesi)",
+      "venue": "Komunitas Utan Kayu",
+      "city": "Jakarta",
+      "description": "Arsip lengkap FFJ Vol. 2: jadwal per hari, enam program screening, daftar film, Talks, dan Awards dengan video acceptance speech.",
+      "films": [],
+      "ticketUrl": "",
+      "ticketStatus": "closed",
+      "detailUrl": "/program/vol2/",
+      "featured": false
+    },
+    {
+      "id": "ffj-bertamasya",
+      "title": "FFJ Bertamasya",
+      "type": "roadshow",
+      "status": "past",
+      "date": "",
+      "endDate": "",
+      "time": "",
+      "venue": "",
+      "city": "Berbagai kota",
+      "description": "Rangkaian roadshow dan kolaborasi pemutaran FFJ pada 2026. Detail sesi dapat ditambahkan saat terkonfirmasi.",
+      "films": [],
+      "ticketUrl": "",
+      "ticketStatus": "closed",
+      "detailUrl": "/archive/",
+      "featured": false
+    }
+  ]
+}
