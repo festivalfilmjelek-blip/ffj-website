@@ -1276,3 +1276,156 @@ h1, h2, h3 {
     padding: 22px;
   }
 }
+
+
+/* ========================================
+   FFJ 8-BIT ARCADE LOADING SCREEN
+   ======================================== */
+
+.ffj-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  background: #171414;
+  color: #f7d742;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .35s steps(5, end),
+              visibility .35s;
+}
+
+.ffj-loader.ffj-loader-exit {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.ffj-loader-screen {
+  width: min(100%, 680px);
+  min-height: 380px;
+  border: 4px solid #f7d742;
+  padding: clamp(20px, 4vw, 36px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 10px 10px 0 #ff5b9b;
+  font-family: monospace;
+}
+
+.ffj-loader-top,
+.ffj-loader-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.ffj-loader-top span:first-child {
+  color: #ff5b9b;
+}
+
+.ffj-loader-center {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.ffj-loader-star {
+  font-size: 35px;
+  color: #ff5b9b;
+  animation: ffj-pixel-blink .45s steps(1) infinite;
+}
+
+.ffj-loader-title {
+  font-family: 'Archivo Black', Impact, sans-serif;
+  font-size: clamp(32px, 7vw, 66px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin: 15px 0;
+  text-shadow: 4px 4px 0 #ff5b9b;
+}
+
+.ffj-loader-subtitle {
+  color: #ff5b9b;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.ffj-loader-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ffj-loader-bar {
+  display: grid;
+  grid-template-columns: repeat(20, minmax(0, 1fr));
+  gap: 4px;
+  width: 100%;
+}
+
+.ffj-loader-pixel {
+  height: 17px;
+  background: #494040;
+}
+
+.ffj-loader-pixel.active {
+  background: #f7d742;
+  box-shadow: 0 3px 0 #b89424;
+}
+
+.ffj-loader-message {
+  min-height: 20px;
+  text-align: center;
+  color: #ff5b9b;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+@keyframes ffj-pixel-blink {
+  50% { opacity: 0; }
+}
+
+@media (max-width: 600px) {
+  .ffj-loader-screen {
+    min-height: 330px;
+    padding: 20px;
+    box-shadow: 6px 6px 0 #ff5b9b;
+  }
+
+  .ffj-loader-title {
+    letter-spacing: -1px;
+    text-shadow: 3px 3px 0 #ff5b9b;
+  }
+
+  .ffj-loader-top,
+  .ffj-loader-info {
+    font-size: 10px;
+  }
+
+  .ffj-loader-bar {
+    gap: 2px;
+  }
+
+  .ffj-loader-pixel {
+    height: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ffj-loader-star {
+    animation: none;
+  }
+
+  .ffj-loader {
+    transition: none;
+  }
+}
