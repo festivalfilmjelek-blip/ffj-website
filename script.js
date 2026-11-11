@@ -376,8 +376,9 @@ if (data) {
 }
 
 
+
 /* ========================================
-   FFJ 8-BIT LOADING ANIMATION
+   FFJ 8-BIT LOADING ANIMATION V2
    ======================================== */
 
 (function initFFJLoader() {
@@ -388,26 +389,23 @@ if (data) {
 
   if (!loader || !bar || !percent || !message) return;
 
-  const closeLoader = () => {
-    loader.classList.add('ffj-loader-exit');
-    setTimeout(() => loader.remove(), 400);
-  };
+  let closed = false;
 
-  // Respect reduced-motion preferences.
+  function closeLoader() {
+    if (closed) return;
+    closed = true;
+
+    loader.classList.add('ffj-loader-exit');
+
+    setTimeout(() => {
+      loader.remove();
+    }, 400);
+  }
+
+  // Accessibility: skip animation for reduced-motion users.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     closeLoader();
     return;
-  }
-
-  // Show only once per browser tab/session.
-  try {
-    if (sessionStorage.getItem('ffj-loader-seen') === 'yes') {
-      closeLoader();
-      return;
-    }
-    sessionStorage.setItem('ffj-loader-seen', 'yes');
-  } catch (error) {
-    // Continue normally if browser storage is unavailable.
   }
 
   const messages = [
@@ -418,8 +416,10 @@ if (data) {
   ];
 
   const totalPixels = 20;
-  const duration = 1800;
-  const startTime = performance.now();
+  const duration = 3000;
+
+  // Create pixel blocks.
+  bar.innerHTML = '';
 
   for (let i = 0; i < totalPixels; i++) {
     const pixel = document.createElement('div');
@@ -428,13 +428,17 @@ if (data) {
   }
 
   const pixels = Array.from(bar.children);
+  let startTime = null;
 
   function animate(now) {
+    if (startTime === null) startTime = now;
+
     const progress = Math.min((now - startTime) / duration, 1);
     const value = Math.floor(progress * 100);
     const activePixels = Math.ceil(progress * totalPixels);
 
-    percent.textContent = String(value).padStart(2, '0') + '%';
+    percent.textContent =
+      String(value).padStart(2, '0') + '%';
 
     pixels.forEach((pixel, index) => {
       pixel.classList.toggle('active', index < activePixels);
@@ -450,9 +454,14 @@ if (data) {
     if (progress < 1) {
       requestAnimationFrame(animate);
     } else {
-      setTimeout(closeLoader, 250);
+      percent.textContent = '100%';
+      message.textContent = 'READY TO BE JELEK!';
+
+      // Hold the final frame before revealing the site.
+      setTimeout(closeLoader, 500);
     }
   }
 
   requestAnimationFrame(animate);
 })();
+
