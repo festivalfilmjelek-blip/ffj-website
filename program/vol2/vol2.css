@@ -8,3 +8,16 @@
 .film-list span {
   color: #171414;
 }
+
+/* FIX: Judul film agar terlihat jelas */
+.p2-inside ol li a,
+.p2-inside ol li a:visited {
+  background: #171414;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.p2-inside ol li a:hover {
+  background: #ff5b9b;
+  color: #171414;
+}
