@@ -374,3 +374,85 @@ if (pressMoreButton) {
 if (data) {
   renderFFJPress();
 }
+
+
+/* ========================================
+   FFJ 8-BIT LOADING ANIMATION
+   ======================================== */
+
+(function initFFJLoader() {
+  const loader = document.getElementById('ffj-loader');
+  const bar = document.getElementById('ffj-loader-bar');
+  const percent = document.getElementById('ffj-loader-percent');
+  const message = document.getElementById('ffj-loader-message');
+
+  if (!loader || !bar || !percent || !message) return;
+
+  const closeLoader = () => {
+    loader.classList.add('ffj-loader-exit');
+    setTimeout(() => loader.remove(), 400);
+  };
+
+  // Respect reduced-motion preferences.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    closeLoader();
+    return;
+  }
+
+  // Show only once per browser tab/session.
+  try {
+    if (sessionStorage.getItem('ffj-loader-seen') === 'yes') {
+      closeLoader();
+      return;
+    }
+    sessionStorage.setItem('ffj-loader-seen', 'yes');
+  } catch (error) {
+    // Continue normally if browser storage is unavailable.
+  }
+
+  const messages = [
+    'INITIALIZING BAD CINEMA...',
+    'LOADING WEIRD FILMS...',
+    'REJECTING PERFECTION...',
+    'READY TO BE JELEK!'
+  ];
+
+  const totalPixels = 20;
+  const duration = 1800;
+  const startTime = performance.now();
+
+  for (let i = 0; i < totalPixels; i++) {
+    const pixel = document.createElement('div');
+    pixel.className = 'ffj-loader-pixel';
+    bar.appendChild(pixel);
+  }
+
+  const pixels = Array.from(bar.children);
+
+  function animate(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const value = Math.floor(progress * 100);
+    const activePixels = Math.ceil(progress * totalPixels);
+
+    percent.textContent = String(value).padStart(2, '0') + '%';
+
+    pixels.forEach((pixel, index) => {
+      pixel.classList.toggle('active', index < activePixels);
+    });
+
+    const messageIndex = Math.min(
+      Math.floor(progress * messages.length),
+      messages.length - 1
+    );
+
+    message.textContent = messages[messageIndex];
+
+    if (progress < 1) {
+      requestAnimationFrame(animate);
+    } else {
+      setTimeout(closeLoader, 250);
+    }
+  }
+
+  requestAnimationFrame(animate);
+})();
